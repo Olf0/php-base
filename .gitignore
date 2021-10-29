@@ -1,5 +1,5 @@
-src/App/Views/_system/cache/
-src/App/Views/_system/compiled/
-src/App/Views/_system/config/
+App/Views/_system/cache/
+App/Views/_system/compiled/
+App/Views/_system/config/
 mysql/
 modules
