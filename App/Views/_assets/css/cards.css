@@ -1,0 +1,40 @@
+
+.home-grid {
+  display: grid;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 172px;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
+
+.card {
+  position: relative;
+  display: block;
+  border: 1px solid lightgray;
+  width: 200px;
+  height: 166px;
+}
+  
+.card-title {
+  margin: 10px;
+  text-align: center;
+  text-decoration:none;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card-img {
+  width: 198px;
+  height: auto;
+  opacity: 0.6;
+  transition: .3s ease-in-out;
+}
+
+.card-img:hover {
+	opacity: 1;
+}
+

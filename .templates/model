@@ -1,0 +1,12 @@
+<?php;
+
+require_once('App/Model/BaseModel.php');
+
+class TemplateModel extends BaseModel
+{
+    # Tabla a usar por el modelo
+    public $table = 'tablename';
+
+}
+
+?>

@@ -1,0 +1,194 @@
+/* Navbar custom */
+    .navbar-custom {
+      background-color:#6bb9de;
+        color:#ffffff;
+        border-radius:0;
+    }
+      
+    .navbar-custom .navbar-nav > li > a {
+        color:#fff;
+    }
+
+    .navbar-custom .navbar-nav > .active > a {
+        color: #ffffff;
+      background-color:transparent;
+    }
+          
+    .navbar-custom .navbar-nav > li > a:hover,
+    .navbar-custom .navbar-nav > li > a:focus,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus,
+    .navbar-custom .navbar-nav > .open >a {
+        text-decoration: none;
+         
+        background-color: #155d84;
+    }
+         
+    .navbar-custom .navbar-brand {
+        color:#FFFFFF; 
+    }
+    .navbar-custom .navbar-toggle {
+        background-color:#eeeeee;
+    }
+    .navbar-custom .icon-bar {
+        background-color:#155d84;
+    }
+
+    /* Textos custom */
+    .custom-text-white span {
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    /* Boxes y divs */
+    .box-header-custom
+    {
+        background-color: #6bb9de;
+        padding: 10px;
+        color: #FFFFFF;
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .panel-body
+    {
+      /*  background-color: rgba(100, 149, 237, 0.32);*/
+    }
+
+
+    .divison {
+        border-color: #6cb0d6;
+        border-width: initial;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .box-destacado
+    {
+        /* Se usa por ejemplo, en el box del buscador. */
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        background-color: #dddddd; 
+        border-radius: 10px;
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        margin: 30px auto; /* Centramos y hacemos un margin top */
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* BOX */
+
+    .row {
+  margin-top: 20px;
+  }.fa-lg
+{
+  vertical-align: 0%;
+}
+
+.box
+{
+  border-color: #DBDEE0;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0px 0px 30px 0px;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  background-color: #FFFFFF;
+}
+
+.box-header
+{
+  background-color: #F4F5F5;
+  color: #34383C;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 40px;
+  border-bottom-color: #DBDEE0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.box-header i
+{
+  color: #CED1D4;
+  border-right-color: #DBDEE0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.box-title p
+{
+  color: #7C848D;
+  font-size: 18px;
+  display: inline-block;
+  margin: 5px 0px 0px 10px;
+}
+
+.box-title p+p
+{
+  margin-left: 5px;
+}
+
+.box-icon i
+{
+  border-right: none;
+  color: inherit;
+  background-color: inherit;
+}
+.box-icon a,
+.box-icon a:link,
+.box-icon a:visited
+{
+  border-left-color: #DBDEE0;
+  border-left-width: 1px;
+  border-left-style: solid;
+  color: #7C848D;
+  text-decoration: none;
+  display: inline-block;
+  width: 40px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  float: left;
+  background-color: transparent;
+}
+.box-icon a:hover,
+.box-icon a:focus
+{
+  background-color: #7C848D;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom-width: 0px;
+  color: #F4F5F5;
+}
+
+.box-content
+{
+  color: #000000;
+  background-color: #FFFFFF;
+  padding: 10px;
+}

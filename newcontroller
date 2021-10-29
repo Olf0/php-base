@@ -1,0 +1,65 @@
+<?php
+
+$error = '';
+
+if (!isset($argv[1])) 
+    $error = 'Ingrese un nombre para el controlador';
+
+if (!isset($argv[2]))
+    $error = 'Ingrese el nombre de la tabla a usar en la base de datos';
+
+    if (isset($argv[1]) && strlen($argv[1])<4)
+    $error = "El nombre del controlador debe tener al menos 4 caracteres";
+
+
+if ($error == '')
+{
+    $controlador = ucwords($argv[1]);
+    
+    if (file_exists('App/Views/'.strtolower($controlador).'.tpl'))
+        $error = 'Ya existe una vista utilizando ese nombre';
+    
+    if (file_exists('App/Model/'.$controlador.'Model.php'))
+        $error = 'Ya existe un modelo con ese nombre';
+    
+    if (file_exists('App/Controller/'.$controlador.'Controller.php'))
+        $error = 'Ya existe un controlador con ese nombre';
+
+}
+
+if ($error != '')
+{
+    printf( "Asistente para agregar controlador nuevo\n");
+    printf( "Genera el controlador, el modelo y la vista\n");
+    printf( "-------------------------------------------\n");
+    printf( "Modo de uso:\n");
+    printf( " - php newcontroller [NOMBRE] [TABLA_BASE_DE_DATOS]\n");
+    printf( "\n");
+    printf( "Ejemplo:\n");
+    printf( "- php newcontroller Productos productos\n");
+    printf( "\n");
+    printf( "ERROR! " . $error . "\n");
+    printf( "\n");
+
+    exit;
+}
+
+
+printf("Generando recursos...\n");
+
+$texto = file_get_contents('.templates/controller');
+$texto = str_replace('Template', $controlador, $texto);
+$texto = str_replace('templateview', strtolower($controlador), $texto);
+$texto = str_replace('showx', 'showTemplate', $texto);
+file_put_contents('App/Controller/'.$controlador.'Controller.php', $texto);
+
+$texto = file_get_contents('.templates/model');
+$texto = str_replace('Template', $controlador, $texto);
+$texto = str_replace('tablename', strtolower($argv[2]), $texto);
+file_put_contents('App/Model/'.$controlador.'Model.php', $texto);
+
+copy('.templates/view', 'App/Views/'.strtolower($controlador).'.tpl');
+printf("Completado!\n");
+
+
+?>

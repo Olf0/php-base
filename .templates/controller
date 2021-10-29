@@ -1,0 +1,30 @@
+<?php;
+
+require_once('App/Model/TemplateModel.php');
+
+class TemplateController
+{
+    private $model;
+
+    public function __construct()
+    {
+        $this->model = new TemplateModel();
+    }
+
+    public function inicio()
+    {
+        $title = 'Titulo de la pagina';
+        $data = array();
+
+
+        $mapa = array(
+            'Inicio' => $base,
+            'Template' => '#'
+        );
+
+        showx('templateview', compact('mapa', 'data'));
+    }
+
+}
+
+?>
