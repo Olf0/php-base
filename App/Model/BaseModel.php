@@ -143,7 +143,7 @@ class BaseModel
         $var = 'CONCAT (' . str_replace(',','," ",',$var) . ')';
 
         if ($this->where == '')
-            $this->where = 'WHERE ' . $var . ' LIKE "%' . $val . '%"';
+            $this->where = 'WHERE FIELD LIKE "%' . $val . '%" IN (' . $var . ')';
         else
             $this->where .= ' OR FIELD LIKE "%' . $val . '%" IN (' . $var . ')';
 
